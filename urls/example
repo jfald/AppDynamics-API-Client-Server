@@ -1,0 +1,6 @@
+###
+# The order of the urls are important. The urls must follow a line that starts with "#S [node name|app name]" Other comments are ignored
+# The Time-range information will be added in the script.
+###
+
+#S exampleNode
