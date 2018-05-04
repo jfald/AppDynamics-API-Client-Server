@@ -71,7 +71,7 @@ class appDynamicsAPIClient:
 	# Data returned is something like-- name, type, enable, duration-min, wait-time-min, condition-value-type, condition-value, operator, logical-metric-name
 	def getHealthRules(self,appName):
 		url = 'http://'+self.server+':'+self.port+'/controller/healthrules/'+appName
-		response = requests.get(url,auth=("restapi@customer1", "Restful"))
+		response = requests.get(url,auth=(self.user, self.pw))
 		DOMTree = xml.dom.minidom.parseString(response.text)
 		collection = DOMTree.documentElement
 		healthRules = collection.getElementsByTagName("health-rule")

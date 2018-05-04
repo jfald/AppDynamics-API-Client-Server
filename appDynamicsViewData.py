@@ -3,7 +3,7 @@
 import appDynamicsAPIClient
 import ConfigParser
 from misc import CreateReport
-from misc import CreateC33PerfTestReport
+
 
 class view:
 	def __init__(self):
@@ -145,9 +145,9 @@ class view:
 
 	def createReport(self,app,mins):
                 interval=mins;
-		c33 = CreateReport.CreateReport(self.user, self.pw, app, interval)
-                c33.getData();
-                return c33.zipOutput()
+		cr = CreateReport.CreateReport(self.user, self.pw, app, interval)
+                cr.getData();
+                return cr.zipOutput()
 
 # Main part of program if run locally--
 if __name__ == "__main__":
